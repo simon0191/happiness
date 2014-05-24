@@ -18,9 +18,14 @@ require.config({
 	}
 });
 
-require(['jquery', 'myTemplates', 'handlebars'], function($, myTemplates, Handlebars) {
+require(['jquery', 'myTemplates', 'handlebars', 'write'], function($, myTemplates, Handlebars, writer) {
 	'use strict';
 	$('body').append(myTemplates['message']({
 		msg: 'Hello World'
 	}));
+    
+    writer.write("123456","123/4587");
+    window.write1 = writer;
+    alert(writer.find("123/4587"));
+    
 });
