@@ -1,0 +1,12 @@
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+test/bower_components
+www
+
+#phonegap
+#TODO: pasar a grunt http://stackoverflow.com/questions/17911204/gitignore-for-phonegap-cordova-3-0-projects-what-should-i-commit
+platforms/
+plugins/
