@@ -2,18 +2,13 @@ define(['handlebars'], function(Handlebars) {
 
 this["JST"] = this["JST"] || {};
 
-this["JST"]["message"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["home"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
+  
 
 
-  buffer += "<h1>\n	";
-  if (helper = helpers.msg) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.msg); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + ", Fuck yeah!\n</h1>";
-  return buffer;
+  return "<ul class=\"list\">\r\n	<li class=\"item\">\r\n		<h1>\r\n		How was your day today?\r\n		</h1>\r\n	</li>\r\n	<li class=\"item\">\r\n		<input id=\"happiness-range\" type=\"range\" min=\"0\" max=\"100\" value=\"50\">\r\n	</li>\r\n	<li class=\"item\">\r\n		<button id=\"save-btn\" class=\"button button-block button-positive\">Save</button>\r\n	</li>\r\n</ul>";
   });
 
 return this["JST"];
