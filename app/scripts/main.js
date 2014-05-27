@@ -26,6 +26,6 @@ require(['jquery', 'myTemplates', 'handlebars', 'write'], function($, myTemplate
     
     writer.write("123456","123/4587");
     window.write1 = writer;
-    alert(writer.find("123/4587"));
+    alert(writer.find('x'));
     
 });
