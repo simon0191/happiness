@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="no-js">
+<html>
     <head>
         <meta charset="utf-8">
-        <title>chikena_app2</title>
+        <title>Happiness</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
-
+        <link rel="stylesheet" href="../bower_components/ionic/release/css/ionic.css">
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -17,33 +17,26 @@
         <!-- endbuild -->
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-
-
-          </ul>
+        <div id="header">
         </div>
 
-        <script src="phonegap.js"></script>
+        <div id="content">
+        </div>
 
+        <div id="footer">
+        </div>
+
+
+        <script src="phonegap.js"></script>
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/requirejs/require.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
-
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script src="scripts/requireConfig.js"></script>
         <!-- endbuild -->
-</body>
+    </body>
 </html>
-
 <!-- http://www.webdesignporto.com/3-steps-to-fully-automatized-javascript-environment-with-yeoman-and-require-js-for-lazy-people/ -->

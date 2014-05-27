@@ -1,11 +1,10 @@
-/** Main.js **/
 require.config({
 
 	baseUrl: 'scripts',
 	paths: {
 		jquery: '../../bower_components/jquery/dist/jquery',
 		handlebars: '../../bower_components/handlebars/handlebars',
-		myTemplates: './templates'
+		templates: './templates'
 	},
 	shim: {
 		handlebars: {
@@ -18,8 +17,11 @@ require.config({
 	}
 });
 
-require(['jquery', 'myTemplates', 'handlebars', 'write'], function($, myTemplates, Handlebars, writer) {
+
+require(['app'], function(app) {
+
 	'use strict';
+<<<<<<< HEAD:app/scripts/main.js
 	$('body').append(myTemplates['message']({
 		msg: 'Hello World'
 	}));
@@ -29,3 +31,7 @@ require(['jquery', 'myTemplates', 'handlebars', 'write'], function($, myTemplate
     alert(writer.find('x'));
     
 });
+=======
+	app.init();
+});
+>>>>>>> 3ec8393e0dcc72c82039165fec9d4fa6152cdad4:app/scripts/requireConfig.js

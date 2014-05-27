@@ -1,7 +1,8 @@
-define(function (require) {
+define(function(require) {
 
-    "use strict";
+    'use strict';
 
+<<<<<<< HEAD
     //funcion auxiliar para encontrar valor en DB, se neesitan 2 por lo que es asincrono.
         function getval( callback ){
             jQuery.getJSON('https://api.mongolab.com/api/1/databases/happiness/collections/my-coll?apiKey=5pIQfbFNaIani-w-ZfLb97QOR6xf3KRw',            function(data) {
@@ -49,8 +50,53 @@ define(function (require) {
         
 
     
+=======
+    var $ = require('jquery'),
 
-    // The public API
+        //======== Constants =======
+        url = 'https://api.mongolab.com/api/1/databases/happiness',
+        apiKey = '5pIQfbFNaIani-w-ZfLb97QOR6xf3KRw',
+
+        //====== Will be Public =========
+        write = function(valueToWrite, dateToWrite) {
+            var postUrl = url + "/collections/logs?apiKey=" + apiKey;
+            /*
+            var data = JSON.stringify({
+                fecha: valueToWrite
+            });
+
+            $.post(postUrl, data, function(response) {
+                deferred.resolve(response);
+            }, 'json');
+*/
+
+            var deferred = $.Deferred();
+
+            $.ajax({
+                url: postUrl,
+                data: JSON.stringify({
+                    "fecha": dateToWrite,
+                    "nivel": valueToWrite
+                }),
+                type: 'POST',
+                contentType: 'application/json'
+            }).done(function(response){
+                deferred.resolve(response);
+            });
+
+            return deferred.promise();
+        },
+        find = function(dateTofind) {
+            var getUrl = url + '/collections/logs?apiKey=' + apiKey;
+            var deferred = $.Deferred();
+            $.getJSON(getUrl, function(response) {
+                deferred.resolve(response);
+            });
+            return deferred.promise();
+        };
+>>>>>>> 3ec8393e0dcc72c82039165fec9d4fa6152cdad4
+
+    //====== Public API ======
     return {
         write: write,
         find: find

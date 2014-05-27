@@ -330,9 +330,9 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     baseUrl: '<%= config.app %>/scripts/',
-                    name: 'main',
-                    mainConfigFile: '<%= config.app %>/scripts/main.js',
-                    out: '.tmp/concat/scripts/main.js'
+                    name: 'requireConfig',
+                    mainConfigFile: '<%= config.app %>/scripts/requireConfig.js',
+                    out: '.tmp/concat/scripts/app.js'
                 }
             }
         },
