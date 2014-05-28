@@ -1,9 +1,15 @@
-<h1>
+<h1 class="main-question">
 How was your day today?
 </h1>
 <ul class="list">
 	<li class="item">
-		<input id="happiness-range" type="range" min="0" max="100" value="50">
+		<div class="row">
+			<div class="emoticon col col-10">: (</div>
+			<div class="col col-80 range range-energized">
+				<input id="happiness-range" type="range" min="0" max="100" value="50">
+			</div>
+			<div class="emoticon col col-10">:D</div>
+		</div>
 	</li>
 	<li class="item">
 		<button id="save-btn" class="button button-block button-positive">Save</button>

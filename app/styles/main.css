@@ -7,3 +7,19 @@ body {
 input[type="range"] {
 	width:100%;
 }
+
+.icon-selected {
+	//font-weight: bolder;
+	text-decoration: underline;
+}
+
+.main-question {
+	font-size: 4rem;
+}
+
+.emoticon {
+	transform:rotate(90deg);
+	ms-transform:rotate(90deg); /* IE 9 */
+	-webkit-transform: rotateZ(90deg);
+	text-align: center;
+}

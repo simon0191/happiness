@@ -4,9 +4,21 @@ define(['jquery', 'templates', 'handlebars', 'write','utils/dateUtils'],
 
 		//====== Private =========
 		var $el = $('<div/>'),
+			$headerEl = $('<div/>'),
+
+			initHeader = function() {
+				$headerEl.append(templates['navbar']());
+				$headerEl.on('click','.icon',function(){
+					$('.icon').removeClass('icon-selected');
+					$(this).addClass('icon-selected');
+				});
+
+				$('#header').html($headerEl);
+			},
 
 		//====== Will be Public =========
 			init = function() {
+				initHeader();
 				$el.append(templates['home']());
 
 				$el.on('click','#save-btn',function() {
