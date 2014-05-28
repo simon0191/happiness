@@ -19,19 +19,6 @@ require.config({
 
 
 require(['app'], function(app) {
-
 	'use strict';
-<<<<<<< HEAD:app/scripts/main.js
-	$('body').append(myTemplates['message']({
-		msg: 'Hello World'
-	}));
-    
-    writer.write("123456","123/4587");
-    window.write1 = writer;
-    alert(writer.find('x'));
-    
-});
-=======
 	app.init();
 });
->>>>>>> 3ec8393e0dcc72c82039165fec9d4fa6152cdad4:app/scripts/requireConfig.js

@@ -1,5 +1,5 @@
 define(['jquery', 'templates', 'handlebars', 'write','utils/dateUtils'],
-	function($, templates, Handlebars, writer,dateUtils) {
+	function($,templates, Handlebars, writer,dateUtils) {
 		'use strict';
 
 		//====== Private =========
@@ -10,10 +10,10 @@ define(['jquery', 'templates', 'handlebars', 'write','utils/dateUtils'],
 				$el.append(templates['home']());
 
 				$el.on('click','#save-btn',function() {
-					var happinessVal = $('#range-input').val();
+					var happinessVal = $('#happiness-range').val();
 					writer.write(happinessVal,dateUtils.getCurrDate())
 					.done(function(response) {
-						alert('');
+						console.log(response);
 					});
 				});
 
@@ -23,5 +23,5 @@ define(['jquery', 'templates', 'handlebars', 'write','utils/dateUtils'],
 		//========= Public API =============
 		return {
 			init: init
-		}
+		};
 	});

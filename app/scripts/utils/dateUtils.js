@@ -1,5 +1,5 @@
-define([], function() {
-
+define(function() {
+	'use strict';
 	//======== Private ===========
 	var to2Places = function(n) {
 			return n < 10 ? '0' + n : '' + n;
@@ -12,7 +12,7 @@ define([], function() {
 			var month = to2Places(currDate.getMonth());
 			var year = currDate.getFullYear();
 
-			return
+			return [year,month,day].join('/');
 		};
 
 	//======== Public API ===========

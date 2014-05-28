@@ -294,7 +294,8 @@ module.exports = function(grunt) {
                         'config.xml',
                         'res/*',
                         'fonts/*'
-                    ]},{
+                    ]
+                }, {
                     expand: true,
                     dot: true,
                     cwd: 'bower_components/bootstrap/dist',
