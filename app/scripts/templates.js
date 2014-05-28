@@ -8,7 +8,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<ul class=\"list\">\r\n	<li class=\"item\">\r\n		<h1>\r\n		How was your day today?\r\n		</h1>\r\n	</li>\r\n	<li class=\"item\">\r\n		<input id=\"happiness-range\" type=\"range\" min=\"0\" max=\"100\" value=\"50\">\r\n	</li>\r\n	<li class=\"item\">\r\n		<button id=\"save-btn\" class=\"button button-block button-positive\">Save</button>\r\n	</li>\r\n</ul>";
+  return "<h1>\r\nHow was your day today?\r\n</h1>\r\n<ul class=\"list\">\r\n	<li class=\"item\">\r\n		<input id=\"happiness-range\" type=\"range\" min=\"0\" max=\"100\" value=\"50\">\r\n	</li>\r\n	<li class=\"item\">\r\n		<button id=\"save-btn\" class=\"button button-block button-positive\">Save</button>\r\n	</li>\r\n</ul>";
   });
 
 return this["JST"];
