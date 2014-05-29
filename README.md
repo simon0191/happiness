@@ -2,13 +2,13 @@
 ### 1.1. Install dev dependencies
    - [Install node](http://nodejs.org/)
 
-   - Install grunt ``npm install -g grunt``
+   - Install grunt and grunt-cli ``npm install -g grunt-cli grunt``
 
    - Install phonegap ``npm install -g phonegap``
 
    - Install the SDK's you want to work with (Android/IOS/...)
 
-   - Create dirs *platforms*,*plugins* and *merges* inside *chikena_app* dir
+   - Create dirs *platforms*,*plugins* and *merges* inside *happiness* dir
 
 ### 1.2. Download/Install project dependencies
    - execute ``npm install``
