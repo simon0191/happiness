@@ -18,8 +18,8 @@ input[type="range"] {
 }
 
 .emoticon {
-	transform:rotate(90deg);
-	ms-transform:rotate(90deg); /* IE 9 */
+	transform:rotateZ(90deg);
+	ms-transform:rotateZ(90deg);
 	-webkit-transform: rotateZ(90deg);
 	text-align: center;
 }
