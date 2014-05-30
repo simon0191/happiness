@@ -4,6 +4,8 @@ require.config({
 	paths: {
 		jquery: '../../bower_components/jquery/dist/jquery',
 		handlebars: '../../bower_components/handlebars/handlebars',
+		backbone: '../../bower_components/backbone/backbone',
+		underscore: '../../bower_components/underscore/underscore',
 		templates: './templates'
 	},
 	shim: {
@@ -13,7 +15,14 @@ require.config({
 				this.Handlebars = Handlebars;
 				return this.Handlebars;
 			}
-		}
+		},
+		backbone: {
+            deps: ['underscore', 'jquery'],
+            exports: 'Backbone'
+        },
+        underscore: {
+            exports: '_'
+        }
 	}
 });
 

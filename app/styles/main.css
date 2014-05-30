@@ -8,8 +8,7 @@ input[type="range"] {
 	width:100%;
 }
 
-.icon-selected {
-	//font-weight: bolder;
+.tab-selected {
 	text-decoration: underline;
 }
 
@@ -22,4 +21,5 @@ input[type="range"] {
 	ms-transform:rotateZ(90deg);
 	-webkit-transform: rotateZ(90deg);
 	text-align: center;
+	font-weight: bolder;
 }

@@ -1,39 +1,36 @@
-define(['jquery', 'templates', 'handlebars', 'write','utils/dateUtils'],
-	function($,templates, Handlebars, writer,dateUtils) {
-		'use strict';
+define(function(require) {
 
-		//====== Private =========
-		var $el = $('<div/>'),
-			$headerEl = $('<div/>'),
+	'use strict';
 
-			initHeader = function() {
-				$headerEl.append(templates['navbar']());
-				$headerEl.on('click','.icon',function(){
-					$('.icon').removeClass('icon-selected');
-					$(this).addClass('icon-selected');
-				});
+	var Router = require('Router'),
+		NavbarView = require('views/NavbarView'),
+		Backbone = require('backbone'),
+		$ = require('jquery'),
 
-				$('#header').html($headerEl);
-			},
+		navbar = new NavbarView(),
 
 		//====== Will be Public =========
-			init = function() {
-				initHeader();
-				$el.append(templates['home']());
+		init = function() {
+			initRouter();
+			initNavbar();
+		},
 
-				$el.on('click','#save-btn',function() {
-					var happinessVal = $('#happiness-range').val();
-					writer.write(happinessVal,dateUtils.getCurrDate())
-					.done(function(response) {
-						console.log(response);
-					});
-				});
+		//====== Private =========
 
-				$('#content').html($el);
-			};
+		initNavbar = function() {
+			navbar.render();
+		},
+		initRouter = function() {
+			var router = new Router();
+			Backbone.history.start();
+		},
+		getNavbar = function() {
+			return navbar;
+		}
 
-		//========= Public API =============
-		return {
-			init: init
-		};
-	});
+	//========= Public API =============
+	return {
+		init: init,
+		getNavbar: getNavbar
+	};
+});
